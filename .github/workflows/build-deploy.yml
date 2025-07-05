@@ -21,31 +21,7 @@ jobs:
 
       - name: Convert Markdown to HTML
         run: |
-          mkdir -p build
-          # Copy static assets
-          cp -r images build/ || true
-          cp styles.css build/ || true
-          
-          # Generate index.html
-          pandoc content/index.md \
-            -o build/index.html \
-            --template=template.html \
-            --variable title="Asociación Autismo y Neurodiversidad Esplugues" \
-            --variable lang="es" \
-            --variable css="styles.css"
-          
-          # Generate other pages
-          for file in content/*.md; do
-            if [ "$file" != "content/index.md" ]; then
-              filename=$(basename "$file" .md)
-              pandoc "$file" \
-                -o "build/${filename}.html" \
-                --template=template.html \
-                --variable title="$filename | Asociación Autismo y Neurodiversidad Esplugues" \
-                --variable lang="es" \
-                --variable css="styles.css"
-            fi
-          done
+          make
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
