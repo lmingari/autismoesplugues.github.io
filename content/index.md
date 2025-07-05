@@ -1,3 +1,11 @@
-Apoyo Familiar
---------------
-Ofrecemos programas de apoyo y orientación a las familias que tienen personas con autismo, brindando herramientas y estrategias para mejorar la convivencia y el bienestar familiar.
+---
+title: "Home | Asociación Autismo y Neurodiversidad Esplugues"
+lang: es
+css: "styles.css"
+---
+
+Novedades
+---------
+
+* Próximo encuentro en ...
+* Actualizadas nuestras redes sociales, etc...

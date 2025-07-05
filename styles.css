@@ -64,11 +64,24 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+h1 {
+    color: #615f5e;
+    text-align:center;
+    padding-bottom: 10px;
+}
+
 h2 {
-    color: #2575fc;
+    color: #c19d84;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+    margin-top: 20px;
+}
+
+p{
+    color: #c19d84;
+    margin-top: 0;
+    padding-top: 0px;
 }
 
 .services-grid {
@@ -174,6 +187,15 @@ footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+}
+
+blockquote { 
+    background-color: #e5e7e9;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 @media (max-width: 768px) {
