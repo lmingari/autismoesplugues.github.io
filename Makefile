@@ -24,7 +24,7 @@ $(BUILD_DIR)/styles.css: styles.css
 
 # Pattern rule for processing each .md file
 $(BUILD_DIR)/%.html: $(SRC_DIR)/%.md
-	pandoc $< -o $@ --template=template.html
+	pandoc $< -o $@ --template=template.html --lua-filter=wrap-sections.lua
 
 # Clean target to remove build directory
 clean:

@@ -10,32 +10,63 @@
     $endif$
 </head>
 <body>
-    <header>
-        <img src="images/logo.svg" alt="Logo" height=80">
-        <div class="logo">Asociación Autismo y Neurodiversidad Esplugues</div>
-        <p>Celebrando la diversidad neurológica y apoyando a la comunidad autista</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="acerca.html">Quiénes somos</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="colabora.html">Colabora con nosotros</a></li>
-            <li><a href="contacto.html">Contáctanos</a></li>
-        </ul>
-    </nav>
-    
     <div class="container">
-        <section>
-            $body$
-        </section>
+        <!-- Left Navigation Panel -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo" height=180>
+                <p>Asociación Autismo y Neurodiversidad Esplugues</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="acerca.html" class="nav-link" data-section="about">Quiénes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link" data-section="services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recursos.html" class="nav-link" data-section="resources">Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="colabora.html" class="nav-link" data-section="colabora">Colabora con nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link" data-section="contact">Contáctanos</a>
+                </li>
+            </ul>
+
+            <footer class="sidebar-footer">
+                <p>&copy; 2025 Asociación Autismo y Neurodiversidad Esplugues</p>
+                <p>Todos los derechos reservados</p>
+            </footer>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section class="section active">
+                $body$
+            </section>
+        </main>
     </div>
+
+    <script>
+        // Set active navigation based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Add active class to current section link
+            const activeLink = document.querySelector(`[data-section="$section$"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+    </script>
     
-    <footer>
-        <p>© 2025 Asociación Autismo y Neurodiversidad Esplugues - Todos los derechos reservados</p>
-        <p>Diseñado con ♥ por y para la comunidad neurodivergente</p>
-    </footer>
 </body>
 </html>
