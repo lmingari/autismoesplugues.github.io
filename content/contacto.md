@@ -7,15 +7,9 @@ css: "styles.css"
 
 ## Contacto
 
-### Escríbenos 
+Puedes contactarnos a través de las siguientes vías:
 
-(formulario de contacto con los campos nombre / asunto / email)
+[![Email Logo](images/email.svg){ width=64px }](mailto:autismoneurodiesplugues@gmail.com)
+[![Instagram Logo](images/Instagram.svg){ width=64px }](https://www.instagram.com/autismo_neurodiv_esplugues)
 
-### Redes sociales
-
-### Instagram
-
-(¡imprescindible!).
-
-
-
+o directamente mediante el formulario:

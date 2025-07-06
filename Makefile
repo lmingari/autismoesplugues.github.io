@@ -26,6 +26,9 @@ $(BUILD_DIR)/styles.css: styles.css
 $(BUILD_DIR)/%.html: $(SRC_DIR)/%.md
 	pandoc $< -o $@ --template=template.html --lua-filter=wrap-sections.lua
 
+$(BUILD_DIR)/contacto.html: $(SRC_DIR)/contacto.md
+	pandoc $< -o $@ --template=template.html --lua-filter=wrap-sections.lua --lua-filter=raw-html.lua
+
 # Clean target to remove build directory
 clean:
 	rm -rf $(BUILD_DIR)
