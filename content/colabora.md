@@ -23,5 +23,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Empresas colaboradoras
 
-> **Note**
+> **Nota**
 > Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
