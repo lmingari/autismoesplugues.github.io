@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | Asociación Autismo y Neurodiversidad
+Esplugues</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="container">
+        <!-- Left Navigation Panel -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo" height=180>
+                <p>Asociación Autismo y Neurodiversidad Esplugues</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="acerca.html" class="nav-link" data-section="about">Quiénes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link" data-section="services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recursos.html" class="nav-link" data-section="resources">Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="colabora.html" class="nav-link" data-section="colabora">Colabora con nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link" data-section="contact">Contáctanos</a>
+                </li>
+            </ul>
+
+            <footer class="sidebar-footer">
+                <p>&copy; 2025 Asociación Autismo y Neurodiversidad Esplugues</p>
+                <p>Todos los derechos reservados</p>
+            </footer>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section class="section active">
+                <h2 id="quiénes-somos">Quiénes Somos</h2>
+                <p>Somos una asociación local dedicada a promover la
+                comprensión y aceptación de la neurodiversidad, con
+                enfoque especial en el autismo en la comunidad de
+                Esplugues de Llobregat. Fundada por un grupo de personas
+                autistas y familiares, nuestra misión es crear una
+                sociedad más inclusiva donde todas las formas de
+                neurodiversidad sean valoradas y respetadas.</p>
+                <section id="propósito" class="card">
+                <h3>Propósito</h3>
+                <p>Velamos por la dignidad y la defensa de los derechos
+                de las personas con autismo, por su inclusión en todos
+                los ámbitos de la vida social, económica y cultural así
+                como mejorar su calidad de vida y la de sus familias</p>
+                </section>
+                <section id="junta-directiva" class="card">
+                <h3>Junta directiva</h3>
+                <p>Integrantes:</p>
+                <ul>
+                <li>Presidenta: María Emilia Becerro</li>
+                <li>Secretario: Jordi Daunis</li>
+                <li>Tesorera: Encarnación Ponte</li>
+                <li>Vocal: Vanessa Pérez</li>
+                <li>Vocal: Carolina Cedillo</li>
+                <li>Vocal: Ana Bravo</li>
+                <li>Vocal: Ainhoa Gil</li>
+                </ul>
+                </section>
+                <section id="historia-de-la-asociación" class="card">
+                <h3>Historia de la asociación</h3>
+                <p><em>hay que redactar una historia para la
+                asociación</em></p>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Set active navigation based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Add active class to current section link
+            const activeLink = document.querySelector(`[data-section="about"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+    </script>
+    
+</body>
+</html>
