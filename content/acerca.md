@@ -7,7 +7,7 @@ css: "styles.css"
 
 ## Quiénes Somos
 
-Somos una asociación local dedicada a promover la comprensión y aceptación de la neurodiversidad, con enfoque especial en el autismo en la comunidad de Esplugues de Llobregat. Fundada por un grupo de personas autistas y aliados, nuestra misión es crear una sociedad más inclusiva donde todas las formas de neurodiversidad sean valoradas y respetadas.
+Somos una asociación local dedicada a promover la comprensión y aceptación de la neurodiversidad, con enfoque especial en el autismo en la comunidad de Esplugues de Llobregat. Fundada por un grupo de personas autistas y familiares, nuestra misión es crear una sociedad más inclusiva donde todas las formas de neurodiversidad sean valoradas y respetadas.
 
 ### Propósito
 
