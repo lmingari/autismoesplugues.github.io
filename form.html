@@ -1,5 +1,5 @@
 <div class="form-container">
-    <h2>Envíe un mensaje</h2>
+    <h2>Formulario de contacto</h2>
     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="cb8f9c5f-ed05-4059-8076-d3b91b8641ba">
         <input type="hidden" name="redirect" value="https://web3forms.com/success">
@@ -7,11 +7,11 @@
         <input type="hidden" name="from_name" value="Autismo esplugues">
         <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" autocomplete="on" required>
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="on" required>
         </div>
         <div class="form-group">
             <label for="subject">Subject</label>

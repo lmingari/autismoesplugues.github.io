@@ -7,9 +7,7 @@ css: "styles.css"
 
 ## Asociación Autismo y Neurodiversidad Esplugues
 
-Bienvenidos a nuestro sitio web!
-
-<img src="images/elefante.jpg" width="70%">
+![](images/elefante.jpg)
 
 ### Novedades
 

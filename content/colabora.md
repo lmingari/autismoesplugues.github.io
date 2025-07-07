@@ -21,5 +21,6 @@ ES1601829305970202472516
 
 ### Empresas colaboradoras
 Si eres una empresa, quieres colaborar con nosotros y quieres que tu logo aparezca en nuestra web, escríbenos a autismoneurodiesplugues@gmail.com
+
 > **Nota**
 > Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
