@@ -44,21 +44,50 @@ Esplugues</title>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <section class="section active">
                 <h2 id="contacto">Contacto</h2>
-                <section id="escríbenos" class="card">
-                <h3>Escríbenos</h3>
-                <p>(formulario de contacto con los campos nombre /
-                asunto / email)</p>
-                </section>
-                <section id="redes-sociales" class="card">
-                <h3>Redes sociales</h3>
-                </section>
-                <section id="instagram" class="card">
-                <h3>Instagram</h3>
-                <p>(¡imprescindible!).</p>
-                </section>
-            </section>
+                <p>Puedes contactarnos a través de las siguientes
+                vías:</p>
+                <p><a
+                href="mailto:autismoneurodiesplugues@gmail.com"><img
+                src="images/email.svg" alt="Email" /></a> <a
+                href="https://www.instagram.com/autismo_neurodiv_esplugues"><img
+                src="images/Instagram.svg" alt="Instagram" /></a></p>
+                <p>o directamente mediante el formulario:</p>
+                                <div class="form-container">
+                                    <h2>Formulario de contacto</h2>
+                                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                        <input type="hidden" name="access_key" value="cb8f9c5f-ed05-4059-8076-d3b91b8641ba">
+                                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                        <input type="hidden" name="subject" value="New message from website">
+                                        <input type="hidden" name="from_name" value="Autismo esplugues">
+                                        <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" id="name" name="name" autocomplete="on" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" name="email" autocomplete="on" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input type="text" id="subject" name="subject" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea id="message" name="message" required placeholder="Mensaje..."></textarea>
+                                        </div>
+                                        <input type="checkbox" name="botcheck" style="display: none;">
+                                        <button type="submit" class="submit-btn">Enviar mensaje</button>
+                                    </form>
+                                </div>
+                            </section>
         </main>
     </div>
 
@@ -76,6 +105,16 @@ Esplugues</title>
                 activeLink.classList.add('active');
             }
         });
+
+        // Toggle left side panel
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        }
     </script>
     
 </body>

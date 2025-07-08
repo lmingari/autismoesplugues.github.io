@@ -44,6 +44,12 @@ Esplugues</title>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <section class="section active">
                 <h2 id="quiénes-somos">Quiénes Somos</h2>
                 <p>Somos una asociación local dedicada a promover la
@@ -78,7 +84,7 @@ Esplugues</title>
                 <p><em>hay que redactar una historia para la
                 asociación</em></p>
                 </section>
-            </section>
+                            </section>
         </main>
     </div>
 
@@ -96,6 +102,16 @@ Esplugues</title>
                 activeLink.classList.add('active');
             }
         });
+
+        // Toggle left side panel
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        }
     </script>
     
 </body>

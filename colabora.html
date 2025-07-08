@@ -44,6 +44,12 @@ Esplugues</title>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <section class="section active">
                 <h2 id="colabora-con-nosotros">Colabora con
                 nosotros</h2>
@@ -77,12 +83,14 @@ Esplugues</title>
                 <h3>Empresas colaboradoras</h3>
                 <p>Si eres una empresa, quieres colaborar con nosotros y
                 quieres que tu logo aparezca en nuestra web, escríbenos
-                a autismoneurodiesplugues@gmail.com &gt;
-                <strong>Nota</strong> &gt; Por ser una asociación de
-                nueva creación, actualmente los donativos, donaciones y
+                a autismoneurodiesplugues@gmail.com</p>
+                <blockquote>
+                <p><strong>Nota</strong> Por ser una asociación de nueva
+                creación, actualmente los donativos, donaciones y
                 aportaciones no son deducibles</p>
+                </blockquote>
                 </section>
-            </section>
+                            </section>
         </main>
     </div>
 
@@ -100,6 +108,16 @@ Esplugues</title>
                 activeLink.classList.add('active');
             }
         });
+
+        // Toggle left side panel
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        }
     </script>
     
 </body>

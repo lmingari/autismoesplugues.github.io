@@ -44,6 +44,12 @@ Esplugues</title>
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <section class="section active">
                 <h2 id="recursos">Recursos</h2>
                 <section id="en-el-municipio-de-esplugues" class="card">
@@ -61,7 +67,7 @@ Esplugues</title>
                 <section id="directorios" class="card">
                 <h3>Directorios</h3>
                 </section>
-            </section>
+                            </section>
         </main>
     </div>
 
@@ -79,6 +85,16 @@ Esplugues</title>
                 activeLink.classList.add('active');
             }
         });
+
+        // Toggle left side panel
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        }
     </script>
     
 </body>

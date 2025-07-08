@@ -43,12 +43,17 @@
 
         <!-- Main Content Area -->
         <main class="main-content">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <section class="section active">
                 <h2
                 id="asociación-autismo-y-neurodiversidad-esplugues">Asociación
                 Autismo y Neurodiversidad Esplugues</h2>
-                <p>Bienvenidos a nuestro sitio web!</p>
-                <p><img src="images/elefante.jpg" width="70%"></p>
+                <p><img src="images/elefante.jpg" /></p>
                 <section id="novedades" class="card">
                 <h3>Novedades</h3>
                 <ul>
@@ -56,7 +61,7 @@
                 <li>Actualizadas nuestras redes sociales, etc…</li>
                 </ul>
                 </section>
-            </section>
+                            </section>
         </main>
     </div>
 
@@ -74,6 +79,16 @@
                 activeLink.classList.add('active');
             }
         });
+
+        // Toggle left side panel
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('show');
+            });
+        }
     </script>
     
 </body>

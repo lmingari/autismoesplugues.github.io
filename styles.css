@@ -27,7 +27,7 @@ body {
 /* Left Navigation Panel */
 .sidebar {
     width: 280px;
-    background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 100%);
+    background: linear-gradient(135deg, var(--color-1), var(--color-3));
     padding: 2rem 0;
     position: fixed;
     height: 100vh;
@@ -70,7 +70,7 @@ body {
     background: white;
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(78, 51, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(78, 51, 0, 0.4);
 }
 
 .logo h1 {
@@ -171,6 +171,18 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.section img {
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+.section a img {
+    height: 3rem;
+    width: auto;
+}
+
 .card {
     background: white;
     border-radius: 12px;
@@ -199,12 +211,135 @@ body {
     color: var(--color-2);
 }
 
-/* Responsive Design */
+.form-container {
+    max-width: 600px; 
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-3);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(185, 147, 90, 0.3);
+    transform: translateY(-1px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--color-3), var(--color-2));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    background: var(--color-1);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sidebar-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--color-5);
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
+    .sidebar-toggle {
+        display: flex;
+    }
+
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
     }
 
     .main-content {
@@ -212,26 +347,8 @@ body {
         padding: 1rem;
     }
 
-    .container {
-        flex-direction: column;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .nav-item {
-        margin-bottom: 0;
-    }
-
-    .nav-link {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+    .section img {
+        max-width: 100%;
+        width: 100%;
     }
 }
